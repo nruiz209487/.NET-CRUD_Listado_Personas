@@ -7,4 +7,13 @@
     <RootNamespace>UI_Modelo</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BL\BL-Modelo.csproj" />
+    <ProjectReference Include="..\ENT-Modelo\ENT-Modelo.csproj" />
+  </ItemGroup>
+
 </Project>
