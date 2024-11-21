@@ -5,7 +5,12 @@ namespace BL
 {
     public class ListaPersonasBL
     {
-        public static List<ClsPersona> listadoPersonas = Service.ObtenerListadoDePersonas();
+        public static List<ClsPersona> listadoPersonas = Service.ObtenerListadoPersonas();
+
+        public static List<ClsPersona> ObtenerListadoPersonas()
+        {
+            return listadoPersonas;
+        }
         public static void EliminarPersona(int id)
         {
             Service.EliminarPersona(id);
@@ -18,9 +23,14 @@ namespace BL
 
         public static void ModificarPersona(ClsPersona obj)
         {
-
-            Service.ModificarPersona(obj);
+            Service.EditarPersona(obj);
         }
+        public static ClsPersona SelecionarPersona(int id)
+        {
+            ClsPersona obj = Service.SelecionarPersona(id);
+            return obj;
+        }
+
     }
 
 }

@@ -1,24 +1,37 @@
-﻿using BL;
+﻿using CRUD_Personas.VM;
 using ENT_Modelo;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace UI_Modelo.Controllers
+namespace CRUD_Personas.Controllers
 {
     public class HomeController : Controller
     {
         // GET: HomeController
         public ActionResult Index()
         {
-            List<ClsPersona> list = ListaPersonasBL.listadoPersonas;
-            return View(list);
+            List<ClsPersona> listado;
+            try
+            {
+                listado = ClsPersonaVM.ObtenerListadoPersonas();
+            }
+            catch (Exception ex)
+            {
+                return RedirectToAction(nameof(Error));
+            }
+            return View(listado);
+        }
+        public ActionResult Error() { 
+            return View();
         }
 
         // GET: HomeController/Details/5
         public ActionResult Details(int id)
         {
-   
-            return View();
+            int idpersona = id;
+            ClsPersonaVM objVm = new ClsPersonaVM();
+            ClsPersona obj = objVm.SelecionarPersona(id);
+            return View(obj);
         }
 
         // GET: HomeController/Create
@@ -30,10 +43,19 @@ namespace UI_Modelo.Controllers
         // POST: HomeController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(ClsPersonaVM model)
         {
+            ClsPersonaVM obj = new ClsPersonaVM();
             try
             {
+                obj.Id = model.Id;
+                obj.Nombre = model.Nombre;
+                obj.Apellido = model.Apellido;
+                obj.fechaNac = model.fechaNac;
+                obj.fechaNac = model.fechaNac;
+                obj.direccion = model.direccion;
+                obj.telefono = model.telefono;
+                obj.AnyadirPersona(obj.Id, obj.Nombre, obj.Apellido, obj.fechaNac, model.direccion, obj.telefono);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -45,16 +67,27 @@ namespace UI_Modelo.Controllers
         // GET: HomeController/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            ClsPersonaVM obj = new ClsPersonaVM();
+            ClsPersona objVM = obj.SelecionarPersona(id);
+            return View(objVM);
         }
 
         // POST: HomeController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(int id, ClsPersonaVM model)
         {
+            ClsPersonaVM obj = new ClsPersonaVM();
             try
             {
+                obj.Id = model.Id;
+                obj.Nombre = model.Nombre;
+                obj.Apellido = model.Apellido;
+                obj.fechaNac = model.fechaNac;
+                obj.fechaNac = model.fechaNac;
+                obj.direccion = model.direccion;
+                obj.telefono = model.telefono;
+                obj.EditarPersona(id, obj.Nombre, obj.Apellido, obj.fechaNac, model.direccion, obj.telefono);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -66,16 +99,20 @@ namespace UI_Modelo.Controllers
         // GET: HomeController/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            ClsPersonaVM vm = new ClsPersonaVM();
+            ClsPersona obj = vm.SelecionarPersona(id);
+            return View(obj);
         }
 
         // POST: HomeController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public ActionResult Delete(int id, ClsPersonaVM model)
         {
+            ClsPersonaVM vm = new ClsPersonaVM();
             try
             {
+                vm.EliminarPersona(id);
                 return RedirectToAction(nameof(Index));
             }
             catch
