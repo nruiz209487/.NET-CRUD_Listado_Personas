@@ -31,7 +31,7 @@ namespace CRUD_Personas.Controllers
             int idpersona = id;
             ClsPersonaVM objVm = new ClsPersonaVM();
             ClsPersona obj = objVm.SelecionarPersona(id);
-            return View(obj);
+            return View("Details", obj);
         }
 
         // GET: HomeController/Create
