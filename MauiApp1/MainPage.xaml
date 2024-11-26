@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:MauiApp1.VM"
+             x:Class="MauiApp1.MainPage">
+
+    <ContentPage.BindingContext>
+        <vm:PersonasViewModel />
+    </ContentPage.BindingContext>
+
+    <!-- Añadir ScrollView para permitir desplazamiento -->
+    <ScrollView Padding="10">
+        <StackLayout Spacing="10">
+
+            <!-- Lista de Personas -->
+            <CollectionView ItemsSource="{Binding Personas}"
+                            SelectionMode="Single"
+                            SelectedItem="{Binding PersonaSeleccionada}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Horizontal" Padding="5">
+                            <Label Text="{Binding nombre}" FontSize="16" VerticalOptions="Center" />
+                            <Label Text="{Binding apellidos}" FontSize="16" VerticalOptions="Center" Margin="10,0,0,0" />
+                            <Label Text="{Binding nombreDept}" FontSize="16" VerticalOptions="Center" Margin="10,0,0,0" />
+                            <Image Source="{Binding img}" MaximumHeightRequest="200" MaximumWidthRequest="200"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <!-- Botones para Acciones -->
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="20">
+                <Button Text="Agregar" Command="{Binding AgregarCommand}" />
+                <Button Text="Eliminar" Command="{Binding EliminarCommand}" />
+                <Button Text="Modificar" Command="{Binding ModificarCommand}" />
+            </StackLayout>
+
+            <!-- Detalles de la Persona Seleccionada -->
+            <StackLayout Padding="10" Spacing="5">
+                <Entry Placeholder="Nombre" Text="{Binding PersonaSeleccionada.nombre}" />
+                <Entry Placeholder="Apellidos" Text="{Binding PersonaSeleccionada.apellidos}" />
+                <Entry Placeholder="Dirección" Text="{Binding PersonaSeleccionada.direccion}" />
+                <Entry Placeholder="Teléfono" Text="{Binding PersonaSeleccionada.telefono}" />
+                <Entry Placeholder="img" Text="{Binding PersonaSeleccionada.img}" />
+                <Picker Title="Departamento" SelectedIndex="{Binding PersonaSeleccionada.dept}">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Finanzas</x:String>
+                            <x:String>RH</x:String>
+                            <x:String>Contabilidad</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </StackLayout>
+            <Button Text="Actualizar" Command="{Binding ActualizarCommand}" />
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

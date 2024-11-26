@@ -5,16 +5,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UI__ModeloMaui.VM
-{
+namespace MauiApp1.VM
+{/// <summary>
+/// hereda de la clase perosna
+/// </summary>
     public class clsPersonaConNombreDept : ClsPersona
     {
 
-
+        /// <summary>
+        /// Nueva Popiedad
+        /// </summary>
         public string nombreDept { get; set; }
 
 
-        // Constructor de la clase derivada que llama al constructor de la clase base
+
+        /// <summary>
+        /// Constructor de la clase derivada que llama al constructor de la clase base para no tener 
+        /// que modificar el constructor con una propiedad mas inicializo la propiedad en este
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="nombre"></param>
+        /// <param name="apellidos"></param>
+        /// <param name="fechaNac"></param>
+        /// <param name="direccion"></param>
+        /// <param name="img"></param>
+        /// <param name="telefono"></param>
+        /// <param name="dept"></param>
         public clsPersonaConNombreDept(int id, string nombre, string apellidos, DateTime? fechaNac, string direccion, string img, string telefono, int dept)
             : base(id, nombre, apellidos, fechaNac, direccion, img, telefono, dept) // Llamada al constructor de la clase base
         {

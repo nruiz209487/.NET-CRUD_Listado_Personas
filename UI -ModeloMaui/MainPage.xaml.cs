@@ -1,25 +1,19 @@
-﻿namespace UI__ModeloMaui
+﻿using UI__ModeloMaui.VM.UI__ModeloMaui.VM;
+
+namespace UI__ModeloMaui
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
+
 
         public MainPage()
         {
             InitializeComponent();
+
+            // Establecer el BindingContext con una instancia de PersonasViewModel
+            BindingContext = new PersonasViewModel();
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
-        {
-            count++;
-
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
-        }
     }
 
 }
