@@ -2,6 +2,7 @@
 using ENT_Modelo;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Reflection;
 
 namespace CRUD_Personas.Controllers
 {
@@ -69,7 +70,13 @@ namespace CRUD_Personas.Controllers
         {
             ClsPersonaVM obj = new ClsPersonaVM();
             ClsPersona objVM = obj.SelecionarPersona(id);
-            return View(objVM);
+                obj.Id = objVM.id;
+                obj.Nombre = objVM.nombre;
+                obj.Apellido = objVM.apellidos;
+                obj.fechaNac = objVM.fechaNac;
+                obj.direccion = objVM.direccion;
+                obj.telefono = objVM.telefono;
+                return View(obj);
         }
 
         // POST: HomeController/Edit/5
@@ -83,7 +90,6 @@ namespace CRUD_Personas.Controllers
                 obj.Id = model.Id;
                 obj.Nombre = model.Nombre;
                 obj.Apellido = model.Apellido;
-                obj.fechaNac = model.fechaNac;
                 obj.fechaNac = model.fechaNac;
                 obj.direccion = model.direccion;
                 obj.telefono = model.telefono;

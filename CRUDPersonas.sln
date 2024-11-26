@@ -5,11 +5,13 @@ VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BL-Modelo", "BL\BL-Modelo.csproj", "{DA0CD2A2-4249-4494-B6A3-62656B462392}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL-Modelo", "DAL-Modelo\DAL-Modelo.csproj", "{9707C971-1ABF-4FFB-9C9E-B5B61E7D9939}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL-Modelo", "DAL-Modelo\DAL-Modelo.csproj", "{9707C971-1ABF-4FFB-9C9E-B5B61E7D9939}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ENT-Modelo", "ENT-Modelo\ENT-Modelo.csproj", "{545265A3-22A1-4D0C-98EA-4264A26AE074}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ENT-Modelo", "ENT-Modelo\ENT-Modelo.csproj", "{545265A3-22A1-4D0C-98EA-4264A26AE074}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI-Modelo", "UI-Modelo\UI-Modelo.csproj", "{D19DC698-0EF1-4C92-BC65-E266ADCCFBB8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UI-Modelo", "UI-Modelo\UI-Modelo.csproj", "{D19DC698-0EF1-4C92-BC65-E266ADCCFBB8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI -ModeloMaui", "UI -ModeloMaui\UI -ModeloMaui.csproj", "{B5329184-73A5-45C4-946B-0CD3C463179D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,12 @@ Global
 		{D19DC698-0EF1-4C92-BC65-E266ADCCFBB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D19DC698-0EF1-4C92-BC65-E266ADCCFBB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D19DC698-0EF1-4C92-BC65-E266ADCCFBB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5329184-73A5-45C4-946B-0CD3C463179D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5329184-73A5-45C4-946B-0CD3C463179D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5329184-73A5-45C4-946B-0CD3C463179D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B5329184-73A5-45C4-946B-0CD3C463179D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5329184-73A5-45C4-946B-0CD3C463179D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5329184-73A5-45C4-946B-0CD3C463179D}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
