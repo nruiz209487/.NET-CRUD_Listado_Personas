@@ -9,9 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL-Modelo", "DAL-Modelo\DA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ENT-Modelo", "ENT-Modelo\ENT-Modelo.csproj", "{545265A3-22A1-4D0C-98EA-4264A26AE074}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UI-Modelo", "UI-Modelo\UI-Modelo.csproj", "{D19DC698-0EF1-4C92-BC65-E266ADCCFBB8}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI -ModeloMaui", "UI -ModeloMaui\UI -ModeloMaui.csproj", "{B5329184-73A5-45C4-946B-0CD3C463179D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UI -ModeloMaui", "UI -ModeloMaui\UI -ModeloMaui.csproj", "{B5329184-73A5-45C4-946B-0CD3C463179D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,10 +29,6 @@ Global
 		{545265A3-22A1-4D0C-98EA-4264A26AE074}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{545265A3-22A1-4D0C-98EA-4264A26AE074}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{545265A3-22A1-4D0C-98EA-4264A26AE074}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D19DC698-0EF1-4C92-BC65-E266ADCCFBB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D19DC698-0EF1-4C92-BC65-E266ADCCFBB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D19DC698-0EF1-4C92-BC65-E266ADCCFBB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D19DC698-0EF1-4C92-BC65-E266ADCCFBB8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B5329184-73A5-45C4-946B-0CD3C463179D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B5329184-73A5-45C4-946B-0CD3C463179D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5329184-73A5-45C4-946B-0CD3C463179D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU

@@ -10,7 +10,12 @@ namespace DAL_Modelo
 {
     public class Service
     {
-       private static  List<ClsPersona> listadoPersonas = new List<ClsPersona>
+
+
+        /// <summary>
+        /// Listado estatico como base para las funciones de service en privado y solo puede ser editado mediante funciones 
+        /// </summary>
+        private static List<ClsPersona> listadoPersonas = new List<ClsPersona>
         {
             new ClsPersona
             {
@@ -40,32 +45,50 @@ namespace DAL_Modelo
                 telefono = "555-9012"
             }
         };
+
+        /// <summary>
+        /// Devuleve el listado privado de personas 
+        /// </summary>
+        /// <returns></returns>
         public static List<ClsPersona> ObtenerListadoPersonas()
         {
             return listadoPersonas;
         }
+        /// <summary>
+        /// Devyuelve una persona seleccionada 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public static ClsPersona SelecionarPersona(int id)
         {
-            ClsPersona obj = new ClsPersona();
-            obj = listadoPersonas.FirstOrDefault(m => m.id == id);
-
+            ClsPersona obj = listadoPersonas.FirstOrDefault(m => m.id == id);
             return obj;
         }
-
+        /// <summary>
+        /// Anyade una nueva persona 
+        /// </summary>
+        /// <param name="obj">recive un objeto de tipo persona </param>
         public static void AnyadirPersona(ClsPersona obj)
         {
             if (!listadoPersonas.Contains(obj))
                 listadoPersonas.Add(obj);
-
         }
 
+
+        /// <summary>
+        /// Edita una nueva persona (En verdad borra la persona con el mismo id que el obj por parametro y lo vuelve a insertar)
+        /// </summary>
+        /// <param name="obj">recive un objt tipo persona</param>
         public static void EditarPersona(ClsPersona obj)
         {
             listadoPersonas.Remove(obj);
             listadoPersonas.Add(obj);
 
         }
-
+        /// <summary>
+        /// Elimna una persona del registro 
+        /// </summary>
+        /// <param name="id">Recive un entero tipo id</param>
         public static void EliminarPersona(int id)
         {
             ClsPersona obj = SelecionarPersona(id);
