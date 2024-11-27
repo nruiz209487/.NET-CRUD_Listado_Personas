@@ -49,18 +49,18 @@ namespace MauiApp1.VM
         public void ActualizarListadoPersonas()
         {
             // Actualiza la lista desde la capa DAL
-            var listadoActualizado = ClsListadoDePersonas.ObtenerListado();
+            List<clsPersonaConNombreDept> listadoActualizado = ClsListadoDePersonas.ObtenerListado();
 
             // Limpiar la colección y agregar los nuevos elementos sin duplicados
             Personas.Clear();
 
             // Asegúrate de que no haya duplicados en la lista.
-            foreach (var persona in listadoActualizado)
+            foreach (clsPersonaConNombreDept persona in listadoActualizado)
             {
-     
-          
-                    Personas.Add(persona);
-                
+
+
+                Personas.Add(persona);
+
             }
         }
 
@@ -102,7 +102,6 @@ namespace MauiApp1.VM
         {
             if (PersonaSeleccionada != null)
             {
-               int  id = PersonaSeleccionada.id;
                 ClsPersona nuevaPersona = new ClsPersona(
                     PersonaSeleccionada.id,
                     PersonaSeleccionada.nombre,

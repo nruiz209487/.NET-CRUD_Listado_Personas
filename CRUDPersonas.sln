@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL-Modelo", "DAL-Modelo\DA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ENT-Modelo", "ENT-Modelo\ENT-Modelo.csproj", "{545265A3-22A1-4D0C-98EA-4264A26AE074}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiApp1", "MauiApp1\MauiApp1.csproj", "{2F17F9D0-37E5-4049-A6A3-E6B4DB57F643}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiApp1", "MauiApp1\MauiApp1.csproj", "{2F17F9D0-37E5-4049-A6A3-E6B4DB57F643}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectoCalculadora", "ProjectoCalculadora\ProjectoCalculadora.csproj", "{123CE9EA-E967-4C00-B8E8-A70DC35E93DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,12 @@ Global
 		{2F17F9D0-37E5-4049-A6A3-E6B4DB57F643}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F17F9D0-37E5-4049-A6A3-E6B4DB57F643}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2F17F9D0-37E5-4049-A6A3-E6B4DB57F643}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{123CE9EA-E967-4C00-B8E8-A70DC35E93DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{123CE9EA-E967-4C00-B8E8-A70DC35E93DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{123CE9EA-E967-4C00-B8E8-A70DC35E93DF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{123CE9EA-E967-4C00-B8E8-A70DC35E93DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{123CE9EA-E967-4C00-B8E8-A70DC35E93DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{123CE9EA-E967-4C00-B8E8-A70DC35E93DF}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

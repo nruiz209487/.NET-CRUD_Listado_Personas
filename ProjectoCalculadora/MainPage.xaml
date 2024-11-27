@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ProjectoCalculadora"
+             x:Class="ProjectoCalculadora.MainPage"
+             xmlns:vm="clr-namespace:ProjectoCalculadora.Models"
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
+    
+    
+    <ContentPage.BindingContext>
+        <vm:CalculadoraVM />
+    </ContentPage.BindingContext>
+    <StackLayout Padding="20">
+
+        <!-- Título de la Calculadora -->
+        <Label Text="Calculadora"
+               FontSize="30"
+               HorizontalOptions="Center"
+               Margin="0,0,0,20" />
+
+        <!-- Entrada de los operadores -->
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="10">
+            <Entry x:Name="OperadorXEntry"
+                   Placeholder="Operador X"
+                   Keyboard="Numeric"
+                   Text="{Binding OperadorX}" />
+
+            <Label Text="and" VerticalTextAlignment="Center" />
+
+            <Entry x:Name="OperadorYEntry"
+                   Placeholder="Operador Y"
+                   Keyboard="Numeric"
+                   Text="{Binding OperadorY}" />
+        </StackLayout>
+
+        <!-- Botones de operaciones -->
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="20">
+            <Button Text="+"
+                    Command="{Binding Suma}"
+                    HorizontalOptions="Center" />
+
+            <Button Text="-"
+                    Command="{Binding Resta}"
+                    HorizontalOptions="Center" />
+
+            <Button Text="*"
+                    Command="{Binding Producto}"
+                    HorizontalOptions="Center" />
+
+            <Button Text="/"
+                    Command="{Binding Division}"
+                    HorizontalOptions="Center" />
+        </StackLayout>
+
+        <!-- Resultado -->
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="10">
+            <Label Text="Resultado:"
+                   VerticalTextAlignment="Center" />
+
+            <Entry x:Name="ResultadoEntry"
+                   Placeholder="Resultado"
+                   IsReadOnly="True"
+                   Text="{Binding Resultado}" />
+        </StackLayout>
+
+    </StackLayout>
+</ContentPage>
+
