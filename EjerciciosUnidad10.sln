@@ -9,9 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL-Modelo", "DAL-Modelo\DA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ENT-Modelo", "ENT-Modelo\ENT-Modelo.csproj", "{545265A3-22A1-4D0C-98EA-4264A26AE074}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiApp1", "MauiApp1\MauiApp1.csproj", "{2F17F9D0-37E5-4049-A6A3-E6B4DB57F643}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrudDinamicoPersonas", "MauiApp1\CrudDinamicoPersonas.csproj", "{2F17F9D0-37E5-4049-A6A3-E6B4DB57F643}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectoCalculadora", "ProjectoCalculadora\ProjectoCalculadora.csproj", "{123CE9EA-E967-4C00-B8E8-A70DC35E93DF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Personas_CRUD", "Personas_CRUD", "{E143EDEA-B762-4365-9E57-26B5D61CC5D0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Claculadora", "Claculadora", "{AC921CC3-5ED3-4A23-B9BB-18B38B46650D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,6 +50,13 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DA0CD2A2-4249-4494-B6A3-62656B462392} = {E143EDEA-B762-4365-9E57-26B5D61CC5D0}
+		{9707C971-1ABF-4FFB-9C9E-B5B61E7D9939} = {E143EDEA-B762-4365-9E57-26B5D61CC5D0}
+		{545265A3-22A1-4D0C-98EA-4264A26AE074} = {E143EDEA-B762-4365-9E57-26B5D61CC5D0}
+		{2F17F9D0-37E5-4049-A6A3-E6B4DB57F643} = {E143EDEA-B762-4365-9E57-26B5D61CC5D0}
+		{123CE9EA-E967-4C00-B8E8-A70DC35E93DF} = {AC921CC3-5ED3-4A23-B9BB-18B38B46650D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {78EC9156-D7F2-4621-9DE4-4A1BA4E7FC09}

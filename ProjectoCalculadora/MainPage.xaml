@@ -5,8 +5,8 @@
              x:Class="ProjectoCalculadora.MainPage"
              xmlns:vm="clr-namespace:ProjectoCalculadora.Models"
              BackgroundColor="{DynamicResource PageBackgroundColor}">
-    
-    
+
+
     <ContentPage.BindingContext>
         <vm:CalculadoraVM />
     </ContentPage.BindingContext>
@@ -49,6 +49,14 @@
 
             <Button Text="/"
                     Command="{Binding Division}"
+                    HorizontalOptions="Center" />
+            
+            <Button Text="%"
+                    Command="{Binding Potencia}"
+                    HorizontalOptions="Center" />
+            
+            <Button Text="res"
+                    Command="{Binding Resto}"
                     HorizontalOptions="Center" />
         </StackLayout>
 
