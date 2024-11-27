@@ -28,6 +28,12 @@
             this.telefono = telefono;
             this.dept = dept;
         }
+
+        public override bool Equals(object? obj)
+        {
+            return obj is ClsPersona persona &&
+                   id == persona.id;
+        }
     }
 
 

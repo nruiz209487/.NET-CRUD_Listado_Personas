@@ -30,6 +30,7 @@ namespace BL
             Service.EliminarPersona(id);
 
         }
+
         /// <summary>
         /// anyade una persona al listado llaama a la funcion en la dal 
         /// </summary>
@@ -38,6 +39,7 @@ namespace BL
         {
             Service.AnyadirPersona(obj);
         }
+
         /// <summary>
         /// 
         /// </summary>

@@ -136,6 +136,7 @@ new ClsPersona
         {
             return listadoPersonas;
         }
+
         /// <summary>
         /// Devyuelve una persona seleccionada 
         /// </summary>
@@ -146,13 +147,14 @@ new ClsPersona
             ClsPersona obj = listadoPersonas.FirstOrDefault(m => m.id == id);
             return obj;
         }
+
         /// <summary>
         /// Anyade una nueva persona 
         /// </summary>
         /// <param name="obj">recive un objeto de tipo persona </param>
         public static void AnyadirPersona(ClsPersona obj)
         {
-            if (!listadoPersonas.Contains(obj))
+        
                 listadoPersonas.Add(obj);
         }
 
@@ -167,6 +169,7 @@ new ClsPersona
             listadoPersonas.Add(obj);
 
         }
+
         /// <summary>
         /// Elimna una persona del registro 
         /// </summary>

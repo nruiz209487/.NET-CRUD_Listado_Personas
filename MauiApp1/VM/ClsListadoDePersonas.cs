@@ -26,7 +26,7 @@ namespace MauiApp1.VM
         /// <returns></returns>
         public static List<clsPersonaConNombreDept> ObtenerListado()
         {
-
+            lista.Clear();
             clsPersonaConNombreDept personaDerivada;
             foreach (ClsPersona x in ListaPersonasBL.ObtenerListadoPersonas())
             {

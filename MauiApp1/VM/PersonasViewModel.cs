@@ -57,11 +57,10 @@ namespace MauiApp1.VM
             // Asegúrate de que no haya duplicados en la lista.
             foreach (var persona in listadoActualizado)
             {
-                // Verifica si la persona ya está en la colección
-                if (!Personas.Any(p => p.id == persona.id))
-                {
+     
+          
                     Personas.Add(persona);
-                }
+                
             }
         }
 
@@ -103,6 +102,7 @@ namespace MauiApp1.VM
         {
             if (PersonaSeleccionada != null)
             {
+               int  id = PersonaSeleccionada.id;
                 ClsPersona nuevaPersona = new ClsPersona(
                     PersonaSeleccionada.id,
                     PersonaSeleccionada.nombre,

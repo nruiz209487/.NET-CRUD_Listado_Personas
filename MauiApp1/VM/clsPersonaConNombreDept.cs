@@ -36,15 +36,15 @@ namespace MauiApp1.VM
         {
             if (dept == 1)
             {
-                this.nombreDept = "finazas";
+                this.nombreDept = "Finanzas";
             }
             else if (dept == 2)
             {
-                this.nombreDept = "rh";
+                this.nombreDept = "Contabilidad";
             }
             else if (dept == 3)
             {
-                this.nombreDept = "contabilidad";
+                this.nombreDept = "Recursos Humanos";
             }
         }
     }
