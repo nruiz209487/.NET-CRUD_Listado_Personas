@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UIEncargos.DetallesCandidatoPage"
+             Title="DetallesCandidatoPage">
+
+
+    <StackLayout Padding="20">
+        <Label Text="Detalles del Candidato" FontSize="Large" FontAttributes="Bold" HorizontalOptions="Center" />
+
+        <Label Text="Nombre" FontAttributes="Bold" />
+        <Label Text="{Binding candidatoSeleccionado.Nombre}" />
+
+        <Label Text="Apellidos" FontAttributes="Bold" />
+        <Label Text="{Binding candidatoSeleccionado.Apellidos}" />
+
+        <Label Text="Teléfono" FontAttributes="Bold" />
+        <Label Text="{Binding candidatoSeleccionado.Telefono}" />
+
+        <Label Text="Edad" FontAttributes="Bold" />
+        <Label Text="{Binding candidatoSeleccionado.edad}" />
+
+        <Label Text="Precio" FontAttributes="Bold" />
+        <Label Text="{Binding candidatoSeleccionado.Precio}" />
+
+        <Button Text="Volver" Command="{Binding VolverAtrasCommand}" />
+    </StackLayout>
+</ContentPage>
