@@ -5,6 +5,10 @@ namespace BL_Encargos
 {
     public class ServiceBL
     {
+        /// <summary>
+        /// Devuleve un Listado De Misiones
+        /// </summary>
+        /// <returns>listado</returns>
         public static List<Mision> ObtenerListadoDeMisiones()
         {
             return ServiceDAL.ObtenerListadoDeMisiones();
