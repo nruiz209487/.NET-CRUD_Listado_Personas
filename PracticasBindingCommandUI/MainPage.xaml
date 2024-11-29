@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PracticasBindingCommandUI.MainPage">
+
+    <StackLayout Orientation="Vertical" Padding="10" Spacing="10">
+        <!-- Texto mostrado -->
+        <Label Text="{Binding Texto}" 
+               FontSize="16" 
+               VerticalOptions="Center" 
+               HorizontalOptions="Center" 
+               Margin="10" />
+
+        <!-- Longitud del texto -->
+        <Label Text="{Binding LongitudTexto}" 
+               FontSize="14" 
+               VerticalOptions="Center" 
+               HorizontalOptions="Center" />
+
+        <!-- Campo de entrada -->
+        <Entry Placeholder="Escribe aquí..." 
+               Text="{Binding Entrytexto}" />
+
+        <!-- Botones -->
+        <Button Text="Actualizar" 
+                Command="{Binding ActualizarCommand}" 
+                BackgroundColor="#4CAF50" 
+                TextColor="White" 
+                IsEnabled="{Binding CanUpdate}" />
+
+        <Button Text="Invertir" 
+                Command="{Binding TextoInvertidoCommand}" 
+                BackgroundColor="Aqua" 
+                TextColor="White" />
+    </StackLayout>
+
+</ContentPage>
